@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+@import url('http://fonts.cdnfonts.com/css/heavy-weight-gamer');
+
+body {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 10vh 90vh;
+    height: 100vh;
+    font-family: 'Heavy Weight Gamer', sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+#imgObject {
+    width: 56px;
+}
+
+
+/* =================== HEADER ======================== */
+
+
+header {
+    position: fixed;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+}
+
+header .line {
+    width: 10vw;
+    height: 1vh;
+    background-color: white;
+}
+
+header img {
+    width: 4rem;
+    height: 4rem;
+    margin: auto 0;
+}
+
+/* Boutons du menu */
+.btn-main {
+    background: #151414;
+    box-shadow: 9px 9px 34px #100f0f, -9px -9px 34px #1a1919;
+    border-radius: 5px;
+    color: white;
+    height: 6vh;
+    padding: 0.6em;
+    margin: 1.2em;
+    border: none;
+    font-family: 'Heavy Weight Gamer', sans-serif;
+    font-size: 1.2em;
+}
+
+.btn-main:hover {
+    background: #151414;
+    box-shadow: inset 9px 9px 34px #100f0f, inset -9px -9px 34px #1a1919;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: ease 0.8s;
+}
+
+
+/* ===========NAV : barres de style de part et d'autre du logo ===================== */
+
+ul {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    align-content: start;
+    border: 2px solid rgb(132, 123, 255, 40%);
+    border-bottom: none;
+    border-top: none;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+}
+
+nav div ul li:nth-of-type(1) {
+    border: 2px solid white;
+    width: 2vw;
+    height: 1vw;
+    margin-bottom: 0.5em;
+}
+
+nav div ul li:nth-of-type(2) {
+    border: 2px solid white;
+    width: 2vw;
+    height: 1vw;
+    margin-bottom: 0.5em;
+}
+
+nav div ul li:nth-of-type(3) {
+    border: 2px solid white;
+    width: 2vw;
+    height: 1vw;
+    margin-bottom: bottom 0.5em;
+}
+
+nav div:nth-of-type(1) {
+    margin: 1em;
+    border: none;
+    width: 8%;
+}
+
+nav div {
+    width: 20%;
+    height: 10vh;
+    border-left: 2px solid white;
+    margin-top: 0.5em;
+}
+
+nav div h1 {
+    color: white;
+    font-size: 1em;
+    margin: 0.2em;
+}
+
+/* ===== MAIN ====== */
+
+main {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 20vw 60vw 20vw;
+}
+
+/* ========== LEFT AND RIGHT PANELS ================ */
+/* Panneaux de gauche et de droite de la carte donnant des informations au joueur */
+
+#left-menu,
+#right-menu {
+    margin-top: 32px;
+    border-radius: 20px;
+    padding: 25px 7px;
+    height: 68%; 
+}
+
+#left-menu {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 17px;
+    background: #1a1a1a;
+    box-shadow: 13px 13px 27px #0d0d0d, -13px -13px 27px #131212;
+}
+
+#right-menu {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 17px;
+    background: #1a1a1a;
+    box-shadow: 13px 13px 27px #0d0c0c, -13px -13px 27px #0f0d0d;
+}
+
+#left-menu:hover {
+    margin-left: 17px;
+    background: #1a1a1a;
+    box-shadow: inset 13px 13px 27px #121212, inset -13px -13px 27px #222222;
+}
+
+#right-menu:hover {
+    margin-right: 17px;
+    background: #1a1a1a;
+    box-shadow: inset 13px 13px 27px #121212, inset -13px -13px 27px #222222;
+}
+
+#right-menu div {
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+}
+
+#left-menu div {
+    border-radius: 8px 0 0 8px;
+}
+
+#left-menu div,
+#right-menu div {
+    width: 100%;
+    height: auto;
+    padding: 0.7em;
+    border-right: none;
+    border-left: none;
+    background: #1a1a1a;
+    box-shadow: 13px 13px 27px #121212, -13px -13px 27px #222222;
+}
+
+#left-menu div:hover,
+#right-menu div:hover {
+    background: #1a1a1a;
+    box-shadow: inset 13px 13px 27px #121212, inset -13px -13px 27px #222222;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+#left-menu h2,
+#right-menu h2 {
+    color: white;
+    opacity: 1;
+    font-size: 1.3em;
+    margin-bottom: 1.1em;
+    padding-left: 36px;
+    font-family: 'Heavy Weight Gamer', sans-serif;
+}
+
+/* User information while playing - on the left panel */
+
+.info-map {
+    font-size: 0.9em;
+    color: #fff;
+    
+}
+
+#info-mapCrash {
+    display:none;
+}
+
+#info-mapBeforeCamp{
+    display: none;
+}
+
+#info-mapCamp {
+    display: none;
+}
+
+#info-mapFinal {
+    display: none;
+}
+
+#info-mapEnd {
+    display: none;
+}
+
+/* ======= Life bar of the hero and its style with browsers compatibility ============ */
+
+.file {
+    margin-top: 1em;
+    border-radius: 10px;
+    transition: 2s;
+}
+
+/* Container appearance */
+progress[value] {
+    /* Chrome/Safari/Opera : default values are reset */
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* Reset the default appearance in Firefox */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Get rid of default border in Firefox. */
+    border: none;
+
+    /* Sizing the element */
+    width: 12em;
+    height: 1.5em;
+}
+
+/* Pseudo class to change container appearance of the XP bar depend on browser */
+
+/* Safari/Chrome/Opera */
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+/* Change the color inside the containers */
+
+/* Opera/chrome/Safari/IE10+ */
+progress[value]::-webkit-progress-value {
+    background: red;
+    border-radius: 2px;
+
+    /* IE10+ change the color through color attribute */
+    color: red;
+}
+
+/* Opera */
+progress[value]::-moz-progress-bar {
+    background-color: red;
+}
